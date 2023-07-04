@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import CurrentEvent from "./components/CurrentEvent";
 
+import  Logo  from "./assets/ufc.png";
+
 import { fetchData, eventOptions } from "./utils/fetchData";
 
 function App() {
@@ -24,8 +26,10 @@ function App() {
 
   return (
     <>
-      <h1>UFC Stats Project</h1>
-      <CurrentEvent data={currentEventData}/>
+      <h1>
+        <img src={Logo} alt="ufc" /> 
+      </h1>
+      <CurrentEvent data={currentEventData} />
     </>
   );
 }
